@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<template name="Приточная вентиляция" description="Описание" >
+	<var id="vents_amount" 
+			name="Количество вентиляторов" 
+			type="i" 
+			default="0" />
+	<var id="water_heater"
+			name="Водяной калорифер"
+			type="b"
+			default="false" />
+	<var id="filter"
+		name="Фильтр"
+		type="b"
+		default="false" />
+</template>
