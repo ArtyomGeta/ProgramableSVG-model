@@ -6,7 +6,8 @@ Module Program
 
     Sub Main(args As String())
 
-        Const PathToTemplates = "C:\Users\silen\source\repos\ProgramableSVG\ProgramableSVG\templates.xml"
+        'Const PathToTemplates = "C:\Users\silen\source\repos\ProgramableSVG\ProgramableSVG\Templates\"
+        Const PathToTemplates = "https://github.com/ArtyomGeta/ProgramableSVG-model/tree/master/ProgramableSVG/Templates.zip"
 
         TemplatesManager.Init(PathToTemplates)
 
