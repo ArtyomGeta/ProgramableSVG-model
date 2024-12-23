@@ -28,7 +28,7 @@ Public MustInherit Class TemplatesManager
             ' Путь для сохранения ZIP-файла
             Dim zipFilePath As String = "C:\Users\silen\source\repos\ProgramableSVG\ProgramableSVG\Templates.zip"
             ' Путь для распаковки
-            Dim extractPath As String = "C:\Users\silen\source\repos\ProgramableSVG\ProgramableSVG\Templates\"
+            Dim extractPath As String = "C:\Users\silen\source\repos\ProgramableSVG\ProgramableSVG\"
 
             ' Скачиваем ZIP-файл
             Using client As New WebClient()
