@@ -5,21 +5,21 @@ Public Class Variable
     ''' <summary>
     ''' Имя переменной, которое будет выведено пользователю
     ''' </summary>
-    Public Property Name() As String
+    Public Property Name As String
     ''' <summary>
     ''' Тип данных этой переменной. Например
     ''' <list type="bullet"><item>i - int</item><item>s - string</item><item>b - boolean</item></list>
     ''' </summary>
-    Public Property Type() As String
+    Public Property Type As String
     ''' <summary>
     ''' ИД переменной. Не будет выведено пользователю
     ''' </summary>
-    Public Property Id() As String
+    Public Property Id As String
     ''' <summary>
     ''' Значение переменной по умолчанию
     ''' </summary>
     ''' <returns></returns>
-    Public Property DefaultValue() As String
+    Public Property DefaultValue As String
 
     ''' <summary>
     ''' Класс переменной для отображения на странице генерации.

@@ -1,4 +1,7 @@
+#If DEBUG Then
+
 Imports System
+Imports System.IO
 Imports System.Xml
 Imports ProgramableSVG
 
@@ -6,24 +9,27 @@ Module Program
 
     Sub Main(args As String())
 
-        'Const PathToTemplates = "C:\Users\silen\source\repos\ProgramableSVG\ProgramableSVG\Templates\"
-        Const PathToTemplates = "https://github.com/ArtyomGeta/ProgramableSVG-model/raw/refs/heads/master/ProgramableSVG/Templates.zip"
+        ProjectsManager.LinkOrPathToProjectsXML = "C:\Users\silen\OneDrive\Документы\HomeWork\Projects.xml"
+        ProjectsManager.LoadNamesAndDescriptions()
 
-        TemplatesManager.Init(PathToTemplates)
+        Dim Projects = New List(Of Project)
 
-        For Each template In TemplatesManager.Templates
+        For Each project In ProjectsManager.Projects
 
-            Console.WriteLine(template.Name)
-            Console.WriteLine(template.Description)
+            Console.WriteLine(project.Name)
+            Console.WriteLine(project.Description)
 
-            For Each var In template.Vars
+            Projects.Add(ProjectsManager.LoadNameDescriptionAndVariables(project.Id))
 
-                Console.WriteLine(vbTab & var.Name)
-
+            For Each var As Variable In Projects.Last.GlobalVars
+                Console.WriteLine(var.Id)
             Next
+
 
         Next
 
     End Sub
 
 End Module
+
+#End If

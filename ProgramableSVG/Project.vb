@@ -1,7 +1,7 @@
 ''' <summary>
 ''' Класс шаблона для вывода на странице выбора
 ''' </summary>
-Public Class Template
+Public Class Project
 
     ''' <summary>
     ''' Имя шаблона
@@ -14,17 +14,19 @@ Public Class Template
     ''' <summary>
     ''' Список переменных для страницы генерации
     ''' </summary>
-    Public Property Vars As List(Of Variable)
+    Public Property GlobalVars As List(Of Variable)
+    Public Property Id As Integer
 
     ''' <summary>
     ''' Класс шаблона для вывода на странице выбора
     ''' </summary>
     ''' <param name="name">Название шаблона</param>
     ''' <param name="description">Описание шаблона</param>
-    Public Sub New(name As String, description As String)
+    Public Sub New(id As Integer, name As String, description As String)
+        Me.Id = id
         Me.Name = name
         Me.Description = description
-        Vars = New List(Of Variable)
+        GlobalVars = New List(Of Variable)
     End Sub
 
 End Class

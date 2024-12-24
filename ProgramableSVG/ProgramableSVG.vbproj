@@ -6,7 +6,13 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Templates\" />
+    <Compile Remove="Templates\**" />
+    <EmbeddedResource Remove="Templates\**" />
+    <None Remove="Templates\**" />
   </ItemGroup>
 
+  <ItemGroup>
+    <PackageReference Include="System.IO.Abstractions" Version="21.1.7" />
+  </ItemGroup>
+	
 </Project>

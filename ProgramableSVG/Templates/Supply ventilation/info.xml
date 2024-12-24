@@ -1,0 +1,5 @@
+<template>
+<name>Приточная вентиляция</name>
+<description>Описание</description>
+<var id="var1" name="Переменная 1" description="Desc" type="i" default="10" />
+</template>
